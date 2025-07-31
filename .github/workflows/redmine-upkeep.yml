@@ -55,7 +55,7 @@ jobs:
              python3 ceph/src/script/redmine-upkeep.py
              --github-action
              --git-dir=./ceph/
-             --limit=5
+             --limit=3
              ${{ github.event_name == 'workflow_dispatch' && (inputs.debug && '--debug' || '') || '' }}
              ${{ github.event_name == 'workflow_dispatch' && format('--limit={}', inputs.limit) || '' }}
         env:
